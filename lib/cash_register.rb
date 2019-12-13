@@ -17,10 +17,11 @@ class CashRegister
     #else 
     #  @items << item
     #end
-    @total += price*quantity
+
     if quantity > 1
       quantity.times do
         @items << item
+  @total += price*quantity
       end
     else 
       @items << item
