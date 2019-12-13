@@ -11,13 +11,13 @@ class CashRegister
     if quantity > 1
       @last_transaction = price*quantity
       @total += @last_transaction
-        quantity.times do
-          @items << item
-        end
+      quantity.times do
+        @items << item
+      end
     else 
       @last_transaction = price
+      @total += @last_transaction
       @items << item
-     @total += @last_transaction
     end
     @total
   end
